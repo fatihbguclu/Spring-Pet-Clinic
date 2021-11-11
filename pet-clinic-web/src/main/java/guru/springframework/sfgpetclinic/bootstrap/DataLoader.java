@@ -12,6 +12,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
@@ -43,13 +45,30 @@ public class DataLoader implements CommandLineRunner {
         //owner1.setId(1L);
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress("Addresses");
+        owner1.setCity("Miami");
+        owner1.setTelephone("123123123");
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setName("Rosco");
+        owner1.getPets().add(mikesPet);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         //owner2.setId(2L);
-        owner2.setFirstName("Michael");
-        owner2.setLastName("Weston");
+        owner2.setFirstName("Fiona");
+        owner2.setLastName("Weston2");
+        owner2.setAddress("Addresses1");
+        owner2.setCity("Miami1");
+        owner2.setTelephone("12312312311");
+
+        Pet fionaPet = new Pet();
+        fionaPet.setPetType(savedCatPetType);
+        fionaPet.setBirthDate(LocalDate.now());
+        fionaPet.setName("Polar");
+        owner2.getPets().add(fionaPet);
 
         ownerService.save(owner2);
 
