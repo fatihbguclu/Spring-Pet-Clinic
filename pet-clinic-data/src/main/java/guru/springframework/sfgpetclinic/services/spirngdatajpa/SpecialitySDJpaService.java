@@ -11,11 +11,11 @@ import java.util.Set;
 
 @Service
 @Profile("springdatajpa")
-public class VetSpecialitySDJpa implements SpecialtyService {
+public class SpecialitySDJpaService implements SpecialtyService {
 
     private final SpecialtyRepository specialtyRepository;
 
-    public VetSpecialitySDJpa(SpecialtyRepository specialtyRepository) {
+    public SpecialitySDJpaService(SpecialtyRepository specialtyRepository) {
         this.specialtyRepository = specialtyRepository;
     }
 
