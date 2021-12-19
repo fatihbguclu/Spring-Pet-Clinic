@@ -141,5 +141,6 @@
     <orderEntry type="library" name="Maven: org.webjars:jquery:2.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:jquery-ui:1.11.4" level="project" />
     <orderEntry type="library" name="Maven: org.webjars:bootstrap:3.3.6" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
   </component>
 </module>
